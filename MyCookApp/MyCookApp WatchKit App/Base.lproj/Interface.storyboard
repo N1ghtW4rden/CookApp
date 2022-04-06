@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc">
+                    <items>
+                        <imageView width="48" height="48" alignment="center" image="logo" id="e1e-f8-Xfl"/>
+                        <label alignment="center" text="CookBook" textAlignment="center" id="KRf-7U-iLy">
+                            <fontDescription key="font" type="system" pointSize="24"/>
+                        </label>
+                        <button width="184" height="44" alignment="left" verticalAlignment="center" title="Next" id="M1u-Oe-dbJ">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="1" green="0.70196078431372544" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="aip-Rn-frN" kind="push" id="RCl-Dm-Hj8"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="OJf-db-YpU">
+            <objects>
+                <controller id="aip-Rn-frN" customClass="InterfaceController" customModule="MyCookApp_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="56g-fR-xLC">
+                            <items>
+                                <tableRow id="wH7-N6-Yth" customClass="TableRow" customModule="MyCookApp_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="9XR-9X-hC2">
+                                        <items>
+                                            <label width="40" height="20" alignment="left" text="Label" id="Df8-Be-5LW"/>
+                                            <label width="40" height="20" alignment="left" text="Label" id="hvA-Ep-qSo"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="recipeIconLabel" destination="Df8-Be-5LW" id="fpD-QG-adl"/>
+                                        <outlet property="recipeNameLabel" destination="hvA-Ep-qSo" id="vTk-Ma-diS"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="Table" destination="56g-fR-xLC" id="H95-eT-c8P"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="513" y="345"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="p3N-xa-A2R">
+            <objects>
+                <controller id="OX1-qF-Ehx"/>
+            </objects>
+            <point key="canvasLocation" x="802" y="345"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="96" height="96"/>
+    </resources>
+</document>
